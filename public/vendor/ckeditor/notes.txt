@@ -1,0 +1,13 @@
+        <div id="editor">
+        </div>
+
+    <script src="{{ asset('asset/ckeditor-standard/js/ckeditor.js') }}"> </script>
+    <script src="{{ asset('asset/ckeditor-standard/js/sample.js') }}"> </script>
+    <script src="{{ asset('asset/ckeditor-standard/js/sf.js') }}"> </script>
+    <script src="{{ asset('asset/ckeditor-standard/js/styles.js') }}"> </script>
+
+
+    <link href="{{ asset('asset/ckeditor-standard/css/samples.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('asset/ckeditor-standard/css/neo.css') }}" type="text/css" rel="stylesheet">
+
+	initSample();
