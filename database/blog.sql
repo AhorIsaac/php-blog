@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2022 at 03:30 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Generation Time: Jan 23, 2023 at 10:09 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,6 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `phone`, `role`, `status`, `image`) VALUES
-(1, 'Heaven', 'heaven@gmail.com', 'heaven', '', 'super_admin', 1, 'heaven.jpg'),
 (2, 'Shie Paul', 'scarfy@gmail.com', 'a92428c4fb4ff96978e45fce55041c70', '0000000000', 'super_admin', 1, 'Screenshot_20200206-150927.png');
 
 -- --------------------------------------------------------
@@ -98,7 +97,8 @@ INSERT INTO `comments` (`id`, `post_comment`, `post_id`, `name`, `timestamp`) VA
 (38, 'I ❤️php too! ', 17, 'Meek Stephen ', '2020-12-17 14:31:41'),
 (39, '🐥🐣🌚🌝🎅  \n                                    ', 15, 'Ajon Aondosoo ', '2022-01-27 21:17:07'),
 (40, '😳☺️☺️☺️❤️fghjkl;', 15, 'Terseer', '2022-04-02 12:38:56'),
-(41, '❤️😍😁😄 lorem ipsum dolor sit amet', 15, 'Nyiishi Timothy', '2022-04-26 23:31:44');
+(41, '❤️😍😁😄 lorem ipsum dolor sit amet', 15, 'Nyiishi Timothy', '2022-04-26 23:31:44'),
+(42, 'I love this post.', 15, 'Trevor Jackson', '2023-01-23 09:56:22');
 
 -- --------------------------------------------------------
 
@@ -131,7 +131,8 @@ INSERT INTO `posts` (`id`, `post_title`, `post_msg`, `post_image`, `user_name`, 
 (15, 'Using Bigger Monitors to Code', '<p>adipisicing elit. Cumque necessitatibus asperiores&nbsp;<br />\r\nquasi dolorum cum enim culpa ab aperiam nihil amet,<br />\r\neos iste odio, dicta, corporis nulla quaerat optio&nbsp;<br />\r\naliquam facere delectus ipsa provident? Officia,&nbsp;<br />\r\nuos laborum! Repudiandae perspiciatis, voluptate&nbsp;</p>', '1607204214_photography-of-person-typing-1181675.jpg', 'Ahor Mercy Shidoon', 5, '2020-12-05 21:36:55'),
 (16, 'Software Development - Big Bang Model', '<p>This <em>model </em>is the simplest model in its form. It requires little planning, lots of programming and lots of funds. This model is conceptualized around the <u>big bang</u> of universe. As scientists say that after big bang lots of galaxies, planets, and stars evolved just as an event. Likewise, if we put together lots of <strong>programming </strong>and funds, you may achieve the best <strong>software </strong>product</p>', '1607431574_314785.jpg', 'Jando Lilian', 2, '2020-12-08 12:46:14'),
 (17, 'PHP The Backend Warrior', '<p>Lorem ipsum, dolor sit amet consectetur&nbsp;<br />\r\nadipisicing elit. Cumque necessitatibus asperiores&nbsp;<br />\r\nquasi dolorum cum enim culpa ab aperiam nihil amet,<br />\r\neos iste odio, dicta, corporis nulla quaerat optio&nbsp;<br />\r\naliquam facere delectus ipsa provident?</p>', '1607597569_wp1958184-php-wallpapers.jpg', 'Shie Paul Aondohemba', 0, '2020-12-10 10:52:49'),
-(18, 'The future of Python Programminng', '<p>quasi dolorum cum enim culpa ab aperiam nihil amet,<br />\r\neos iste odio, dicta, corporis nulla quaerat optio&nbsp;<br />\r\naliquam facere delectus ipsa <em>provident</em>? Officia,&nbsp;<br />\r\nuos laborum! <strong>Repudiandae </strong>perspiciatis, <em>voluptate&nbsp;</em></p>', '1608122189_156M0g.jpg', 'Sarah Edeh', 0, '2020-12-16 12:36:29');
+(18, 'The future of Python Programminng', '<p>quasi dolorum cum enim culpa ab aperiam nihil amet,<br />\r\neos iste odio, dicta, corporis nulla quaerat optio&nbsp;<br />\r\naliquam facere delectus ipsa <em>provident</em>? Officia,&nbsp;<br />\r\nuos laborum! <strong>Repudiandae </strong>perspiciatis, <em>voluptate&nbsp;</em></p>', '1608122189_156M0g.jpg', 'Sarah Edeh', 0, '2020-12-16 12:36:29'),
+(19, 'Introduction to Computer Programming', '<p>this is&nbsp; an&nbsp; introduction to computer programming.</p>', '1674462814_Screenshot 2023-01-19 00.59.42.jpg', 'Agaji Robert', 0, '2023-01-23 08:33:34');
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,8 @@ INSERT INTO `subscribers` (`id`, `email`, `created_at`) VALUES
 (18, 'agenatonsamson@gmail.com', '2020-12-16 12:34:26'),
 (19, 'currency@gmail.com', '2021-02-24 22:07:32'),
 (20, 'christybella@gmail.com', '2021-03-26 21:52:10'),
-(21, 'akaakoholkingdom@gmail.com', '2022-03-11 13:54:07');
+(21, 'akaakoholkingdom@gmail.com', '2022-03-11 13:54:07'),
+(22, 'gkessler@example.net', '2023-01-23 08:57:19');
 
 --
 -- Indexes for dumped tables
@@ -215,19 +217,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables

@@ -377,7 +377,7 @@ function __autoload($Class)
             var submit_comment = $("#submit_comment").val();
 
             $.ajax({
-                url: "controllers/CommentController.php",
+                url: "../controllers/CommentController.php",
                 type: "post",
                 data: {
                     post_id: id,
